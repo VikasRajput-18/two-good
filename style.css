@@ -93,13 +93,72 @@ body {
   width: 70%;
   position: absolute;
   border-radius: 50px;
-  background-color: palegoldenrod;
+  background-color: #e5f0d6;
   z-index: 9;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
+.elem .dets #dets-top {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.elem .dets #dets-top div {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+}
+.elem .dets #dets-top p {
+  line-height: 8px;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.8;
+  font-weight: 100;
+  font-size: 14px;
+}
+.elem .dets #dets-top h3 {
+  line-height: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.elem .dets #dets-top i {
+  line-height: 10px;
+  font-size: 26px;
+}
+.elem .dets #dets-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 10px;
+}
+.elem .dets #dets-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.elem .dets #dets-bottom .dets-bottom-section {
+  flex: 1;
+}
+.elem .dets #dets-bottom .dets-bottom-section img {
+  width: 100%;
+  height: 90px;
+}
+.elem .dets #dets-bottom .dets-bottom-section p {
+  color: #000;
+  opacity: 0.8;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .elem .dets:hover {
   height: 220px;
   margin-top: 170px;
+  border-radius: 20px;
+  align-items: flex-start;
 }
 
 #page3 {
@@ -119,6 +178,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.child img {
+  height: 100%;
 }
 
 #nav {
@@ -162,6 +224,7 @@ body {
 
 #cursor {
   width: 200px;
+  height: 200px;
   background-color: blanchedalmond;
   border-radius: 50%;
   position: fixed;
@@ -238,7 +301,15 @@ body {
     flex-direction: column;
   }
   .child {
+    height: 54vh;
     width: 88vw;
+    position: relative;
     padding: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .elem .dets #dets-top {
+    padding-top: 15px;
   }
 }
