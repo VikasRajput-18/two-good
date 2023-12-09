@@ -124,3 +124,21 @@ function cursorAnimation() {
   });
 }
 cursorAnimation();
+
+function menuAnimation() {
+  document
+    .querySelector("#menu-trigger")
+    .addEventListener("click", function () {
+      gsap.to("#menu", {
+        height: "100vh",
+        duration: 0.4,
+      });
+    });
+  document.querySelector("#menu_remove").addEventListener("click", function () {
+    gsap.to("#menu", {
+      height: "0",
+      duration: 0.4,
+    });
+  });
+}
+menuAnimation();

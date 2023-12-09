@@ -243,6 +243,81 @@ body {
   display: block;
 }
 
+#menu {
+  position: fixed;
+  height: 0px;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  overflow: hidden;
+}
+
+#menu_inner {
+  position: relative;
+  height: 100vh;
+}
+
+#menu_remove {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  font-size: 30px;
+  font-weight: 100;
+  color: white;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+#menu_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+}
+
+#menu_links a {
+  text-decoration: none;
+  color: white;
+  font-size: 5vw;
+  display: block;
+  font-weight: bold;
+  line-height: 4.5vw;
+  letter-spacing: 2px;
+  position: relative;
+}
+#menu_links a::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: white;
+  bottom: 0;
+  margin: 0 40px;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+#menu_links a:hover::after {
+  width: 60%;
+}
+#menu_inner {
+  padding: 0px 4vw;
+  padding-top: 3%;
+}
+#menu_inner #inner_logo {
+  color: white;
+  position: absolute;
+  left: 5%;
+  top: 4%;
+  font-size: 30px;
+  font-weight: 100;
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   #nav {
     padding: 15px;
@@ -260,6 +335,9 @@ body {
   }
   #nav #logo2 {
     height: 40px;
+  }
+  #menu_inner #inner_logo {
+    height: 50px;
   }
 
   #page1 {
@@ -311,5 +389,10 @@ body {
   }
   .elem .dets #dets-top {
     padding-top: 15px;
+  }
+
+  #menu_links a {
+    font-size: 15vw;
+    line-height: 15vw;
   }
 }
